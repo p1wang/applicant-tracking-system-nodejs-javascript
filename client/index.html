@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+    />
+
+    <title>Applicant Tracking System</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Enter keywords form -->
+      <form class="keywords-form" enctype="multipart/form-data">
+        <input
+          type="file"
+          accept=".pdf"
+          id="keywords-form__file-input"
+          name="file"
+          multiple
+          required
+        />
+        <div class="keywords-form__second-line">
+          <input type="text" id="keywords-form__text-input" name="keywords" />
+          <button id="keywords-form__add-btn">Add</button>
+          <button type="submit" id="keywords-form__scan-btn">Scan</button>
+        </div>
+      </form>
+
+      <button id="keywords-form__reset-btn">Reset</button>
+
+      <!-- Keywords display -->
+
+      <div class="keywords">
+        <ul class="keywords__list"></ul>
+      </div>
+
+      <span id="loader">Loading...</span>
+
+      <!-- Results display -->
+      <div class="results">
+        <table class="results__table">
+          <thread>
+            <th class="email">Applicant</th>
+            <th class="percentage">% Matching</th>
+          </thread>
+          <tbody class="results__body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
